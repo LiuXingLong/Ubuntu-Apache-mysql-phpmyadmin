@@ -1,0 +1,25 @@
+ 1.更新软件源
+ sudo  apt-get update
+ 
+ 2.安装Apache
+ sudo apt-get  install apache2
+ 
+ 3.安装PHP5
+ sudo apt-get install php5
+ 
+ 4. 安装mysql  ,安装过程中会让输入数据库的root用户密码，两次输入后即可继续安装至完成，注意这个密码不是系统root账户的密码，而是你安装的数据库默认用户root的密码
+ sudo apt-get install mysql-server
+ 
+ 5.安装phpmyadmin
+ sudo apt-get install phpmyadmin
+ 
+ 安装完成后默认放在/usr/share/phpmyadmin目录下，为了能够使我们通过web访问，这里需要建立一个软连接将其连接到Apache的默认目录下
+ sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
+
+ 6.重启mysql和Apache
+ sudo service mysql restart
+ sudo service apache2 restart
+ 
+ Apache目录：/var/www  该目录是存放文档根目录
+ Chmod 777 /var/www    需设置目录可写
+ 以后安装网站时候需要权限
