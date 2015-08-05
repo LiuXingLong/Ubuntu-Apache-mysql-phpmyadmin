@@ -21,5 +21,5 @@
  sudo service apache2 restart
  
  Apache目录：/var/www  该目录是存放文档根目录
- Chmod 777 /var/www    需设置目录可写
+ Chmod 777 /var/www   需设置目录可写
  以后安装网站时候需要权限
