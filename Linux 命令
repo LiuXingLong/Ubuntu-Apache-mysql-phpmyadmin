@@ -4,3 +4,12 @@ Xshell 上传下载文件到 Linux 服务器
 apt-get install lrzsz
 
 rz 上传文件   sz filename  下载文件
+
+
+登入数据库
+mysql -u用户名 -p密码
+
+show databases; 显示所有数据库
+use 数据库名;  使用数据库
+show tables;显示当前数据库的所有表
+quit;  退出数据库
