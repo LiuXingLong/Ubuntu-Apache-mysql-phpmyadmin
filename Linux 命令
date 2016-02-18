@@ -1,0 +1,6 @@
+Xshell 上传下载文件到 Linux 服务器
+
+服务器需安装 rz.sz
+apt-get install lrzsz
+
+rz 上传文件   sz filename  下载文件
