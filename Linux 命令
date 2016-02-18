@@ -35,3 +35,8 @@ show databases; 显示所有数据库
 use 数据库名;  使用数据库
 show tables;显示当前数据库的所有表
 quit;  退出数据库
+
+
+文件操作
+
+删除文件  rm 文件名
