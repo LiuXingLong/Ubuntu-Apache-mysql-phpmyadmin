@@ -144,3 +144,17 @@ chmod 命令
 
 
 
+ubuntu如何开启Rewrite模块
+
+在终端输入：
+sudo a2enmod rewrite  开启Rewrite模块（停用模块，使用 a2dismod）
+
+
+修改  /etc/apache2/apache2.conf  文件的下面位置
+
+<Directory /var/www/>
+	Options Indexes FollowSymLinks
+	 AllowOverride None （修改为  AllowOverride All）
+	Require all granted
+</Directory>
+
