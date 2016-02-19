@@ -164,3 +164,7 @@ _STORAGE_WRITE_ERROR_:./Application/Runtime/Cache/Home/f8995a0e1afcdadc637612fae
 Runtime 权限不够
 
 解决方法  删除 Runtime 目录里面文件夹里面的文件     然后给 Runtime 和 Runtime 里面文件夹    777 权限    chmod 777 Runtime
+
+
+
+
