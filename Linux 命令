@@ -158,3 +158,9 @@ sudo a2enmod rewrite  开启Rewrite模块（停用模块，使用 a2dismod）
 	Require all granted
 </Directory>
 
+ThinkPHP  linux 报错 :(
+_STORAGE_WRITE_ERROR_:./Application/Runtime/Cache/Home/f8995a0e1afcdadc637612fae5a3b585.php
+
+Runtime 权限不够
+
+解决方法  删除 Runtime 目录里面文件夹里面的文件     然后给 Runtime 和 Runtime 里面文件夹    777 权限    chmod 777 Runtime
