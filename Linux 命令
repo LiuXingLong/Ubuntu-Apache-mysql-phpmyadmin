@@ -19,6 +19,10 @@
 4、shutdown -h 10 10分钟后自动关机
 
 
+Xshell 连接 Linux 服务器    ssh root@192.168.0.130
+
+Xshell 断开 Linux 服务器   exit
+ 
 
 Xshell 上传下载文件到 Linux 服务器
 
