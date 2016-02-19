@@ -31,6 +31,13 @@ apt-get install lrzsz
 
 rz 上传文件   sz filename  下载文件
 
+文件夹上传
+
+1.首先将要上传的文件夹压缩   然后 上传  再解压
+
+2.Linux 解压、压缩  zip
+解压命令是：unzip filename.zip 
+压缩命令是：zip filename.zip files
 
 登入数据库
 mysql -u用户名 -p密码
