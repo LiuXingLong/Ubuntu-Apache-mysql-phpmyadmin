@@ -18,6 +18,21 @@
 
 4、shutdown -h 10 10分钟后自动关机
 
+Linux系统为Ubuntu
+
+一、Start Apache 2 Server /启动apache服务
+# /etc/init.d/apache2 start
+or
+$ sudo /etc/init.d/apache2 start
+二、 Restart Apache 2 Server /重启apache服务
+# /etc/init.d/apache2 restart
+or
+$ sudo /etc/init.d/apache2 restart
+三、Stop Apache 2 Server /停止apache服务
+# /etc/init.d/apache2 stop
+or
+$ sudo /etc/init.d/apache2 stop
+
 
 Xshell 连接 Linux 服务器    ssh root@192.168.0.130
 
