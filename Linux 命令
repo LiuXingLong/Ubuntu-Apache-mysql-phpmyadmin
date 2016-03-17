@@ -167,4 +167,10 @@ Runtime 权限不够
 
 
 
+linux下的卸载命令比较简单
+1、查找你要卸载的包：rpm -qa|grep -i 包名
+2、rpm -e --nodeps 查找到的包
+
+
+
 
