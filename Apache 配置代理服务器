@@ -1,6 +1,14 @@
 
 /***********************    正向代理      **************************/
 
+开启下面模块
+
+LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_connect_module modules/mod_proxy_connect.so
+LoadModule proxy_ftp_module modules/mod_proxy_ftp.so
+LoadModule proxy_http_module modules/mod_proxy_http.so
+
+a2enmod proxy proxy_connect proxy_ftp proxy_http
 
 
 修改文件  apache2.conf
