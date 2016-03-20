@@ -1,0 +1,38 @@
+
+/***********************    正向代理      **************************/
+
+
+
+修改文件  apache2.conf
+
+添加  Listen 本机IP:代理端口
+
+# Include the virtual host configurations:
+IncludeOptional sites-enabled/*.conf
+
+
+在  sites-enabled/000-default.conf 文件中添加一下内容
+
+<VirtualHost *:代理端口>
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/html
+    ServerName  本机IP
+    ServerAlias 本机IP
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+    #正向代理设置
+    ProxyRequests On
+    ProxyVia On
+
+#用来控制谁可以访问你的代理
+    <Proxy *>
+        Order deny,allow
+        Deny from all
+        Allow from all
+    </Proxy>
+</VirtualHost>
+
+
+
+
