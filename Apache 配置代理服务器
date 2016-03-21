@@ -8,7 +8,8 @@ LoadModule proxy_connect_module modules/mod_proxy_connect.so
 LoadModule proxy_ftp_module modules/mod_proxy_ftp.so
 LoadModule proxy_http_module modules/mod_proxy_http.so
 
-a2enmod proxy proxy_connect proxy_ftp proxy_http
+a2enmod proxy proxy_connect proxy_ftp proxy_http    //  a2dismod proxy proxy_connect proxy_ftp proxy_http
+
 
 
 修改文件  apache2.conf
