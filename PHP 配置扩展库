@@ -1,0 +1,13 @@
+1、安装php-curl扩展
+
+首先输入
+apt-cache search curl | grep php
+
+查询curl的php支持名字
+可能会返回如下内容：
+php5-curl - CURL module for php5
+
+安装：
+sudo apt-get install php5-curl
+重启apache
+service apache2 restart
