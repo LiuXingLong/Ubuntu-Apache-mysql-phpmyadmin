@@ -1,5 +1,5 @@
 
-/***********************    正向代理      **************************/
+
 
 开启下面模块
 
@@ -36,8 +36,8 @@ IncludeOptional sites-enabled/*.conf
     ProxyVia On
     
     #反向代理设置
-    # ProxyPass / http://www.liuxinglong.top/
-    # ProxyPassReverse / http://www.liuxinglong.top/
+    ProxyPass / http://www.liuxinglong.top/
+    ProxyPassReverse / http://www.liuxinglong.top/
 
 #用来控制谁可以访问你的代理
     <Proxy *>
