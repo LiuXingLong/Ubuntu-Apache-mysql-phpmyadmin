@@ -10,7 +10,8 @@ LoadModule proxy_http_module modules/mod_proxy_http.so
 
 a2enmod proxy proxy_connect proxy_ftp proxy_http proxy_balancer   //  a2dismod proxy proxy_connect proxy_ftp proxy_http proxy_balancer
 
-//    lbmethod_byrequests      slotmem_shm
+//  负载均衡需要开启  lbmethod_byrequests      slotmem_shm
+
 //注意如果权限不够使用  sudo     
 
 
@@ -51,4 +52,28 @@ IncludeOptional sites-enabled/*.conf
 
 
 
+#负载均衡配置
 
+#Listen 127.0.0.1:80
+<VirtualHost *:80>
+     ServerAdmin webmaster@localhost
+     DocumentRoot /var/www/html
+     ErrorLog ${APACHE_LOG_DIR}/error.log
+     CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+     ProxyRequests Off
+     ProxyPreserveHost On
+     Proxypass / balancer://proxy/
+
+#lbmethod=byrequests 按照请求次数均衡(默认) 
+#lbmethod=bytraffic 按照流量均衡 
+#lbmethod=bybusyness 按照繁忙程度均衡(总是分配给活跃请求数最少的服务器)
+#ProxySet lbmethod=bytraffic
+
+     <Proxy balancer://proxy/>
+         Order Deny,Allow
+         Allow from all
+         BalancerMember http://119.29.165.209:8088 loadfactor=1
+         BalancerMember http://120.27.110.53 loadfactor=1
+     </Proxy>
+</VirtualHost>
