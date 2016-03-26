@@ -34,6 +34,10 @@ IncludeOptional sites-enabled/*.conf
     #正向代理设置
     ProxyRequests On
     ProxyVia On
+    
+    #反向代理设置
+    # ProxyPass / http://www.liuxinglong.top/
+    # ProxyPassReverse / http://www.liuxinglong.top/
 
 #用来控制谁可以访问你的代理
     <Proxy *>
