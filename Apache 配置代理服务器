@@ -15,7 +15,7 @@ a2enmod proxy proxy_connect proxy_ftp proxy_http    //  a2dismod proxy proxy_con
 
 修改文件  apache2.conf
 
-添加  Listen 本机IP:代理端口
+添加  Listen 本机IP:代理端口  // 也可以添加到  sites-enabled/000-default.conf 文件中
 
 # Include the virtual host configurations:
 IncludeOptional sites-enabled/*.conf
