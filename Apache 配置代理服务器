@@ -9,6 +9,7 @@ LoadModule proxy_ftp_module modules/mod_proxy_ftp.so
 LoadModule proxy_http_module modules/mod_proxy_http.so
 
 a2enmod proxy proxy_connect proxy_ftp proxy_http    //  a2dismod proxy proxy_connect proxy_ftp proxy_http
+//注意如果权限不够使用  sudo
 
 
 
