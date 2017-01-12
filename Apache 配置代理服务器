@@ -77,3 +77,25 @@ IncludeOptional sites-enabled/*.conf
          BalancerMember http://120.27.110.53 loadfactor=1
      </Proxy>
 </VirtualHost>
+
+
+根据服务器域名选择  DocumentRoot 路径目录
+
+NameVirtualHost 127.0.0.1:80
+<VirtualHost 127.0.0.1:80>
+   ServerName www.liuxinglong.top
+   ServerAlias *.liuxinglong.top
+   ServerAdmin webmaster@localhost
+   DocumentRoot "/var/www/A"
+   ErrorLog ${APACHE_LOG_DIR}/error.log
+   CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+<VirtualHost 127.0.0.1:80>  
+   ServerAdmin webmaster@localhost
+   DocumentRoot "/var/www/B"
+   ErrorLog ${APACHE_LOG_DIR}/error.log
+   CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+
